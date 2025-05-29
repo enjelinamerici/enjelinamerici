@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Conditional Sentences</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #74ebd5, #9face6);
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 40px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    p, li {
+      font-size: 1.05em;
+      line-height: 1.6em;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    pre {
+      background: #f4f4f4;
+      padding: 10px;
+      border-left: 4px solid #2980b9;
+      font-size: 0.95em;
+      overflow-x: auto;
+    }
+    a {
+      text-decoration: none;
+      color: #2980b9;
+      display: inline-block;
+      margin: 10px 10px 20px 0;
+    }
+    .nav-links {
+      margin-top: 40px;
+    }
+    .nav-links a {
+      background-color: #2980b9;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      margin: 5px;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+    .nav-links a:hover {
+      background-color: #1f6391;
+    }
+    .drag-list, .drop-area {
+      border: 2px dashed #2980b9;
+      border-radius: 8px;
+      min-height: 50px;
+      padding: 10px;
+      margin-bottom: 20px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      background: #f9faff;
+    }
+    .drag-item {
+      background: #2980b9;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 6px;
+      cursor: grab;
+      user-select: none;
+    }
+    .drop-area {
+      background: #e3f2fd;
+      min-height: 60px;
+      align-items: center;
+    }
+    .drop-area.empty::before {
+      content: 'Drop here';
+      color: #bbb;
+      font-style: italic;
+      flex-grow: 1;
+      text-align: center;
+    }
+    button.check-btn {
+      background-color: #2980b9;
+      border: none;
+      color: white;
+      padding: 12px 25px;
+      font-size: 1em;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+    }
+    button.check-btn:hover {
+      background-color: #1f6391;
+    }
+    .result-message {
+      margin-top: 15px;
+      font-weight: 600;
+    }
+    .result-message.correct {
+      color: green;
+    }
+    .result-message.incorrect {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="homepage.html">&larr; Back to Main Menu</a>
+    <h1>Conditional Sentences</h1>
+    <p>Conditional sentences are used to express actions or events that are dependent on a certain condition. They often contain the word "if".</p>
+
+    <h2>Types of Conditional Sentences</h2>
+    <ul>
+      <li><strong>Zero Conditional:</strong> Facts or general truths</li>
+      <li><strong>First Conditional:</strong> Real and possible situations in the future</li>
+      <li><strong>Second Conditional:</strong> Unreal or hypothetical situations in the present or future</li>
+      <li><strong>Third Conditional:</strong> Unreal situations in the past</li>
+    </ul>
+
+    <h2>Examples:</h2>
+    <pre>
+- Zero: If you heat water to 100°C, it boils.
+- First: If it rains tomorrow, we will cancel the trip.
+- Second: If I were you, I would study harder.
+- Third: If they had left earlier, they would have caught the train.
+    </pre>
+
+    <h2>Conditional Structure Table</h2>
+    <pre>
+| Type   | Condition (If clause)       | Result Clause                   | Example                                          |
+|--------|-----------------------------|--------------------------------|--------------------------------------------------|
+| Zero   | Present Simple              | Present Simple                  | If you mix red and blue, you get purple.         |
+| First  | Present Simple              | Will + base verb                | If she calls, I will answer.                     |
+| Second | Past Simple                 | Would + base verb               | If I had money, I would travel the world.        |
+| Third  | Past Perfect                | Would have + past participle    | If he had studied, he would have passed the exam.|
+    </pre>
+
+    <h2>Tips:</h2>
+    <ul>
+      <li>Use the correct verb tense for each type of conditional.</li>
+      <li>"If I were..." is correct for hypothetical second conditionals.</li>
+      <li>Third conditionals often express regrets or past possibilities.</li>
+    </ul>
+
+    <h2>Drag and Drop Exercise</h2>
+    <div id="drag-list" class="drag-list">
+      <div id="part1" class="drag-item" draggable="true">If</div>
+      <div id="part2" class="drag-item" draggable="true">it</div>
+      <div id="part3" class="drag-item" draggable="true">rains</div>
+      <div id="part4" class="drag-item" draggable="true">tomorrow,</div>
+      <div id="part5" class="drag-item" draggable="true">we</div>
+      <div id="part6" class="drag-item" draggable="true">will</div>
+      <div id="part7" class="drag-item" draggable="true">cancel</div>
+      <div id="part8" class="drag-item" draggable="true">the</div>
+      <div id="part9" class="drag-item" draggable="true">trip.</div>
+    </div>
+
+    <div id="drop-area" class="drop-area empty"></div>
+
+    <button id="check-btn" class="check-btn">Check Sentence</button>
+    <div id="result" class="result-message"></div>
+
+    <div class="nav-links">
+      <a href="relative-pronouns.html">Relative Pronouns</a>
+      <a href="conditional-sentence.html">Conditional Sentences</a>
+      <a href="subject_verb_agreement.html">Subject-Verb Agreement</a>
+      <a href="active-passive-participle.html">Active & Passive Participle</a>
+      <a href="comparative.html">Comparatives</a>
+    </div>
+  </div>
+
+  <script>
+    const dragItems = document.querySelectorAll('.drag-item');
+    const dropArea = document.getElementById('drop-area');
+    const dragList = document.getElementById('drag-list');
+    const checkBtn = document.getElementById('check-btn');
+    const result = document.getElementById('result');
+
+    dragItems.forEach(item => {
+      item.addEventListener('dragstart', dragStart);
+    });
+
+    dropArea.addEventListener('dragover', dragOver);
+    dropArea.addEventListener('drop', drop);
+    dropArea.addEventListener('dragenter', dragEnter);
+    dropArea.addEventListener('dragleave', dragLeave);
+
+    dragList.addEventListener('dragover', dragOver);
+    dragList.addEventListener('drop', dropBack);
+
+    function dragStart(e) {
+      e.dataTransfer.setData('text/plain', e.target.id);
+      e.dataTransfer.effectAllowed = 'move';
+    }
+
+    function dragOver(e) {
+      e.preventDefault();
+      e.dataTransfer.dropEffect = 'move';
+      this.classList.add('drag-over');
+    }
+
+    function dragEnter(e) {
+      e.preventDefault();
+      this.classList.add('drag-over');
+    }
+
+    function dragLeave(e) {
+      this.classList.remove('drag-over');
+    }
+
+    function drop(e) {
+      e.preventDefault();
+      this.classList.remove('drag-over');
+      const id = e.dataTransfer.getData('text/plain');
+      const draggableElement = document.getElementById(id);
+
+      if (!this.contains(draggableElement)) {
+        this.appendChild(draggableElement);
+        this.classList.remove('empty');
+        if (dragList.children.length === 0) {
+          dragList.classList.add('empty');
+        } else {
+          dragList.classList.remove('empty');
+        }
+      }
+      result.textContent = '';
+    }
+
+    function dropBack(e) {
+      e.preventDefault();
+      this.classList.remove('drag-over');
+      const id = e.dataTransfer.getData('text/plain');
+      const draggableElement = document.getElementById(id);
+
+      if (!this.contains(draggableElement)) {
+        this.appendChild(draggableElement);
+        if (dropArea.children.length === 0) {
+          dropArea.classList.add('empty');
+        } else {
+          dropArea.classList.remove('empty');
+        }
+      }
+      result.textContent = '';
+    }
+
+    checkBtn.addEventListener('click', () => {
+      const droppedItems = Array.from(dropArea.children);
+      if (droppedItems.length === 0) {
+        result.textContent = 'Please drag parts to form the sentence.';
+        result.className = 'result-message incorrect';
+        return;
+      }
+      const sentence = droppedItems.map(item => item.textContent).join(' ');
+      const correctSentence = "If it rains tomorrow, we will cancel the trip.";
+
+      if (sentence.trim() === correctSentence) {
+        result.textContent = 'Correct! 🎉';
+        result.className = 'result-message correct';
+      } else {
+        result.textContent = 'Incorrect. Try again!';
+        result.className = 'result-message incorrect';
+      }
+    });
+  </script>
+</body>
+</html>

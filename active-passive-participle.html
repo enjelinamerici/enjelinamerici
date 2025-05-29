@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Active & Passive Participle</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #74ebd5, #9face6);
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 40px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    p, li {
+      font-size: 1.05em;
+      line-height: 1.6em;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    pre {
+      background: #f4f4f4;
+      padding: 10px;
+      border-left: 4px solid #2980b9;
+      font-size: 0.95em;
+      overflow-x: auto;
+    }
+    a {
+      text-decoration: none;
+      color: #2980b9;
+      display: inline-block;
+      margin: 10px 10px 20px 0;
+    }
+    .nav-links {
+      margin-top: 40px;
+    }
+    .nav-links a {
+      background-color: #2980b9;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      margin: 5px;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+    .nav-links a:hover {
+      background-color: #1f6391;
+    }
+    .drag-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+/* Area untuk drag items */
+.drag-area {
+  flex: 1;
+  min-height: 200px;
+  background-color: #e3f2fd;
+  border: 2px dashed #90caf9;
+  border-radius: 10px;
+  padding: 15px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+}
+
+/* Saat item didrag ke area drop */
+.drag-area.dragover {
+  background-color: #bbdefb;
+}
+
+/* Item draggable */
+.draggable-item {
+  background-color: #42a5f5;
+  color: white;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  cursor: grab;
+  user-select: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.draggable-item:active {
+  cursor: grabbing;
+  background-color: #1e88e5;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="homepage.html">&larr; Back to Main Menu</a>
+    <h1>Active & Passive Participle</h1>
+    <p>Participles are verb forms used as adjectives to describe nouns. In English, there are two main types of participles: active (present participle) and passive (past participle).</p>
+
+    <h2>1. Active (Present) Participle</h2>
+    <p>The active participle ends in <strong>-ing</strong> and describes an action being done by the subject.</p>
+    <pre>
+- The man <strong>driving</strong> the car is my uncle.
+- We watched the <strong>rising</strong> sun.
+    </pre>
+
+    <h2>2. Passive (Past) Participle</h2>
+    <p>The passive participle usually ends in <strong>-ed</strong>, <strong>-en</strong>, or is an irregular past participle. It describes an action received by the subject.</p>
+    <pre>
+- The car <strong>driven</strong> by John was new.
+- The <strong>broken</strong> window was quickly repaired.
+    </pre>
+
+    <h2>Comparison Table</h2>
+    <pre>
+| Type      | Structure                  | Function                 | Example                              |
+|-----------|----------------------------|--------------------------|--------------------------------------|
+| Active    | Verb-ing                   | Describes doing action   | The girl <strong>singing</strong> is my friend.   |
+| Passive   | Past participle (V3)       | Describes receiving action | The song <strong>sung</strong> by her is beautiful. |
+    </pre>
+
+    <h2>Tips:</h2>
+    <ul>
+      <li>Active participles describe the one doing the action.</li>
+      <li>Passive participles describe the one receiving the action.</li>
+      <li>Both can be used as adjectives before or after nouns.</li>
+    </ul>
+<h2>Drag and Drop Quiz: Active & Passive Participle</h2>
+<p>Drag the participle words to the correct box.</p>
+
+<div style="display: flex; gap: 40px; margin-bottom: 20px;">
+  <div style="flex: 1;">
+    <h3>Words to Drag</h3>
+    <div id="word-bank" style="padding: 10px; border: 2px solid #2980b9; border-radius: 8px; min-height: 150px;">
+      <div draggable="true" class="draggable" style="padding: 8px; margin: 6px 0; background: #74ebd5; cursor: grab; border-radius: 5px;">driving</div>
+      <div draggable="true" class="draggable" style="padding: 8px; margin: 6px 0; background: #74ebd5; cursor: grab; border-radius: 5px;">broken</div>
+      <div draggable="true" class="draggable" style="padding: 8px; margin: 6px 0; background: #74ebd5; cursor: grab; border-radius: 5px;">rising</div>
+      <div draggable="true" class="draggable" style="padding: 8px; margin: 6px 0; background: #74ebd5; cursor: grab; border-radius: 5px;">driven</div>
+    </div>
+  </div>
+
+  <div style="flex: 1;">
+    <h3>Active Participle</h3>
+    <div id="active-box" class="dropbox" style="min-height: 150px; border: 2px dashed #27ae60; padding: 10px; border-radius: 8px;"></div>
+  </div>
+
+  <div style="flex: 1;">
+    <h3>Passive Participle</h3>
+    <div id="passive-box" class="dropbox" style="min-height: 150px; border: 2px dashed #c0392b; padding: 10px; border-radius: 8px;"></div>
+  </div>
+</div>
+
+<button id="check-btn" style="background:#2980b9; color:#fff; border:none; padding:10px 20px; border-radius:6px; cursor:pointer;">Check Answers</button>
+<p id="result" style="font-weight:bold; margin-top:15px;"></p>
+
+<script>
+  const draggables = document.querySelectorAll('.draggable');
+  const dropboxes = document.querySelectorAll('.dropbox');
+  const wordBank = document.getElementById('word-bank');
+  const result = document.getElementById('result');
+
+  draggables.forEach(draggable => {
+    draggable.addEventListener('dragstart', e => {
+      e.dataTransfer.setData('text', e.target.textContent);
+      e.dataTransfer.effectAllowed = 'move';
+    });
+  });
+
+  dropboxes.forEach(box => {
+    box.addEventListener('dragover', e => e.preventDefault());
+    box.addEventListener('drop', e => {
+      e.preventDefault();
+      const word = e.dataTransfer.getData('text');
+      const draggedEl = Array.from(wordBank.children).find(child => child.textContent === word);
+      if (draggedEl) {
+        box.appendChild(draggedEl);
+      }
+    });
+  });
+
+  // Optional: allow dragging back to word bank
+  wordBank.addEventListener('dragover', e => e.preventDefault());
+  wordBank.addEventListener('drop', e => {
+    e.preventDefault();
+    const word = e.dataTransfer.getData('text');
+    const draggedEl = [...dropboxes].flatMap(box => Array.from(box.children)).find(child => child.textContent === word);
+    if (draggedEl) {
+      wordBank.appendChild(draggedEl);
+    }
+  });
+
+  document.getElementById('check-btn').addEventListener('click', () => {
+    const activeWords = Array.from(document.getElementById('active-box').children).map(el => el.textContent);
+    const passiveWords = Array.from(document.getElementById('passive-box').children).map(el => el.textContent);
+
+    // Jawaban benar:
+    const correctActive = ['driving', 'rising'];
+    const correctPassive = ['broken', 'driven'];
+
+    const activeCorrect = activeWords.length === correctActive.length && activeWords.every(w => correctActive.includes(w));
+    const passiveCorrect = passiveWords.length === correctPassive.length && passiveWords.every(w => correctPassive.includes(w));
+
+    if (activeCorrect && passiveCorrect) {
+      result.style.color = 'green';
+      result.textContent = 'Great job! All answers are correct.';
+    } else {
+      result.style.color = 'red';
+      result.textContent = 'Some answers are incorrect. Try again!';
+    }
+  });
+</script>
+
+    <div class="nav-links">
+      <a href="relative-pronouns.html">Relative Pronouns</a>
+      <a href="conditional -sentence.html">Conditional Sentences</a>
+      <a href="subject_verb_agreement.html">Subject-Verb Agreement</a>
+      <a href="active-passive-participle.html">Active & Passive Participle</a>
+       <a href="comparative.html">Comparatives</a>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Comparatives - Grammar Focus</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 40px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    h2 {
+      color: #34495e;
+      margin-top: 30px;
+    }
+    ul {
+      line-height: 1.8;
+    }
+    .example {
+      background-color: #f1f8ff;
+      padding: 10px 15px;
+      border-left: 5px solid #3498db;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+    a {
+      display: inline-block;
+      margin-top: 30px;
+      text-decoration: none;
+      color: #2980b9;
+    }
+    .nav-links {
+      margin-top: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+    .nav-links a {
+      padding: 10px 20px;
+      background: #e0ecff;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #2c3e50;
+      transition: background 0.3s ease;
+    }
+    .nav-links a:hover {
+      background: #d0dcff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="homepage.html">&larr; Back to Main Menu</a>
+    <h1>Comparative Adjectives</h1>
+    <p>Comparative adjectives are used to compare two people, animals, things, or places.</p>
+
+    <h2>1. One-syllable adjectives</h2>
+    <p>For most one-syllable adjectives, add <strong>-er</strong> at the end.</p>
+    <div class="example">
+      tall → taller<br>
+      small → smaller<br>
+      fast → faster
+    </div>
+
+    <h2>2. Adjectives ending in "e"</h2>
+    <p>Just add <strong>-r</strong>.</p>
+    <div class="example">
+      nice → nicer<br>
+      large → larger
+    </div>
+
+    <h2>3. Adjectives ending in consonant + vowel + consonant</h2>
+    <p>Double the last consonant and add <strong>-er</strong>.</p>
+    <div class="example">
+      big → bigger<br>
+      hot → hotter
+    </div>
+
+    <h2>4. Adjectives with two or more syllables</h2>
+    <p>Use <strong>more</strong> before the adjective.</p>
+    <div class="example">
+      beautiful → more beautiful<br>
+      comfortable → more comfortable
+    </div>
+
+    <h2>5. Irregular comparatives</h2>
+    <div class="example">
+      good → better<br>
+      bad → worse<br>
+      far → farther/further
+    </div>
+
+    <h2>6. Using “than” in Comparisons</h2>
+    <p>When making comparisons, we usually follow the comparative adjective with <strong>than</strong>.</p>
+    <div class="example">
+      - She is taller <strong>than</strong> her brother.<br>
+      - This book is more interesting <strong>than</strong> the last one.
+    </div>
+
+    <h2>7. Negative Comparisons</h2>
+    <p>We can also use <strong>not as...as</strong> to show a negative comparison.</p>
+    <div class="example">
+      - This car is <strong>not as fast as</strong> my old one.<br>
+      - He's <strong>not as smart as</strong> his sister.
+    </div>
+
+    <h2>8. Common Mistakes to Avoid</h2>
+    <ul>
+      <li>Don’t use <em>more</em> with adjectives that already take <strong>-er</strong>. (e.g., ❌ more taller → ✅ taller)</li>
+      <li>Don’t use <strong>-er</strong> with long adjectives. Use <em>more</em> instead. (e.g., ❌ beautifuller → ✅ more beautiful)</li>
+    </ul>
+
+    <h2>9. Practice Time!</h2>
+    <p>Try writing sentences using these comparative forms:</p>
+    <ul>
+      <li>Compare your house to your friend's house.</li>
+      <li>Compare two cities you’ve visited.</li>
+      <li>Compare two things in your classroom.</li>
+    </ul>
+    <h2>10. Drag and Drop Practice</h2>
+    <p>Drag the correct comparative form into each blank.</p>
+
+    <div class="exercise" id="quiz">
+      <div class="question">1. My bike is ___ than yours. <span class="blank" data-answer="faster"></span></div>
+      <div class="question">2. This room is ___ than the kitchen. <span class="blank" data-answer="larger"></span></div>
+      <div class="question">3. Today is ___ than yesterday. <span class="blank" data-answer="hotter"></span></div>
+      <div class="question">4. She is ___ than her sister. <span class="blank" data-answer="more beautiful"></span></div>
+      <div class="question">5. This test is ___ than the last one. <span class="blank" data-answer="easier"></span></div>
+    </div>
+
+    <div id="words">
+      <span class="draggable" draggable="true">hotter</span>
+      <span class="draggable" draggable="true">larger</span>
+      <span class="draggable" draggable="true">more beautiful</span>
+      <span class="draggable" draggable="true">faster</span>
+      <span class="draggable" draggable="true">easier</span>
+    </div>
+
+    <button id="submit">Check Answers</button>
+    <div id="result"></div>
+
+    <style>
+      .exercise .question {
+        margin: 15px 0;
+      }
+      .blank {
+        display: inline-block;
+        width: 150px;
+        height: 30px;
+        border: 2px dashed #ccc;
+        vertical-align: middle;
+        margin: 0 10px;
+        text-align: center;
+        line-height: 30px;
+        font-weight: bold;
+        color: #555;
+        background-color: #f9f9f9;
+      }
+      .draggable {
+        display: inline-block;
+        padding: 8px 12px;
+        margin: 5px;
+        background: #9b59b6;
+        color: white;
+        border-radius: 8px;
+        cursor: grab;
+        font-weight: bold;
+      }
+      .correct {
+        background-color: #2ecc71 !important;
+      }
+      #submit {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #34495e;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      #result {
+        margin-top: 20px;
+        font-weight: bold;
+      }
+    </style>
+
+    <script>
+      const draggables = document.querySelectorAll(".draggable");
+      const blanks = document.querySelectorAll(".blank");
+
+      draggables.forEach(item => {
+        item.addEventListener("dragstart", (e) => {
+          e.dataTransfer.setData("text", e.target.textContent);
+        });
+      });
+
+      blanks.forEach(blank => {
+        blank.addEventListener("dragover", (e) => {
+          e.preventDefault();
+        });
+        blank.addEventListener("drop", (e) => {
+          e.preventDefault();
+          const dropped = e.dataTransfer.getData("text");
+          blank.textContent = dropped;
+          blank.classList.remove("correct");
+        });
+      });
+
+      document.getElementById("submit").addEventListener("click", () => {
+        let score = 0;
+        blanks.forEach(blank => {
+          if (blank.textContent === blank.dataset.answer) {
+            blank.classList.add("correct");
+            score++;
+          } else {
+            blank.classList.remove("correct");
+          }
+        });
+        const result = document.getElementById("result");
+        result.textContent = `You got ${score} out of ${blanks.length} correct.`;
+        result.style.color = score === blanks.length ? "green" : "orange";
+      });
+    </script>
+
+    <div class="nav-links">
+      <a href="relative-pronouns.html">Relative Pronouns</a>
+      <a href="conditional -sentence.html">Conditional Sentences</a>
+      <a href="subject_verb_agreement.html">Subject-Verb Agreement</a>
+      <a href="active-passive-participle.html">Active & Passive Participle</a>
+    </div>
+  </div>
+</body>
+</html>
